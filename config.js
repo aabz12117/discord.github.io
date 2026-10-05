@@ -1,4 +1,5 @@
 const config = {
+    visitorCounterUrl: "https://mantledb.sh/v2/bodi-45a41ce6-e042-4bd9/visits",
     // الآيدي الخاص بك (لجلب الحالة والصورة والنشاط المباشر)
     discordId: "695361892327358504", 
     
@@ -35,6 +36,11 @@ const config = {
     // رابط زر Message 
     messageUrl: "https://discord.com/users/695361892327358504"
 };
+
+
+
+
+
 
 
 

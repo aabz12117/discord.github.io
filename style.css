@@ -187,3 +187,4 @@ body{background:linear-gradient(to bottom,rgba(91,106,120,.3) 0%,rgba(91,106,120
 
 
 .custom-status img{width:24px;height:24px;object-fit:contain}.custom-status{gap:9px}
+.visitor-count{display:inline-flex;align-items:center;gap:7px;color:#e5e9ed;font:600 13px Manrope,Arial,sans-serif;font-variant-numeric:tabular-nums}.visitor-count i{font-size:16px}.profile-footer{flex-wrap:wrap}.visitor-count{align-self:flex-start}
