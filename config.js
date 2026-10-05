@@ -19,15 +19,15 @@ const config = {
 
     // الشارات
     badges: [
-        { icon: "fa-solid fa-crown", title: "Server Owner" },
-        { icon: "fa-brands fa-discord", title: "Active Developer" },
-        { icon: "fa-solid fa-fire", title: "HypeSquad Bravery" }
+        { icon: "fa-solid fa-crown", title: "The Crown" },
+        { icon: "fa-solid fa-shield-halved", title: "The Rogue Prince" },
+        { icon: "fa-solid fa-fire", title: "Fire and Blood" }
     ],
     
     // الروابط
     connections: [
-        { name: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/tBrgpfPNTj" },
-        { name: "GitHub", icon: "fa-brands fa-github", url: "https://github.com/aabz12117" },
+        { name: "𝑳𝑶𝑺𝑻 𝑺𝑻𝑶𝑹𝑬", icon: "fa-solid fa-chess-rook", url: "https://discord.gg/p4xGnshYbS" },
+        { name: "𝑴𝒐𝒐𝒏 𝑪𝒉𝒂𝒕", icon: "fa-brands fa-discord", url: "https://discord.gg/tmB8QFCtVn" },
         { name: "Steam", icon: "fa-brands fa-steam", url: "https://steamcommunity.com" },
         { name: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@f.uh3" }
     ],
@@ -35,6 +35,19 @@ const config = {
     // رابط زر Message 
     messageUrl: "https://discord.com/users/695361892327358504"
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
