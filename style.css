@@ -186,3 +186,4 @@ body{background:linear-gradient(to bottom,rgba(91,106,120,.3) 0%,rgba(91,106,120
 .status-indicator.dnd:before{font-family:"Marcellus",Georgia,serif;font-size:12px}
 
 
+.custom-status img{width:24px;height:24px;object-fit:contain}.custom-status{gap:9px}
