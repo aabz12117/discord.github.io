@@ -10,9 +10,10 @@ const config = {
     // الصورة هنا مجرد شكل مؤقت، لأن الموقع سيسحب صورتك الحقيقية من ديسكورد فوراً!
     avatarUrl: "https://cdn.discordapp.com/embed/avatars/0.png",
     
-    // رابط البنر الذي أرسلته
-    bannerUrl: "https://cdn.discordapp.com/attachments/1207765214414639264/1531512805063266334/337426969296556032-banner.gif?ex=6a697bf2&is=6a682a72&hm=eb1a653edf8d74c1017c3918fad0ac10d5e8908f425229ab830de8419ffc5670&",
+    // بنر محلي حتى لا يتعطل عند انتهاء روابط Discord المؤقتة
+    bannerUrl: "storm-dragon-banner.png",
     
+    watching: { title: "House of the Dragon", character: "Daemon Targaryen", image: "daemon-watching.png", details: "He can keep his tongue..." },
     // معلومات إضافية
     memberSince: "Apr 2, 2020",
 
@@ -34,3 +35,6 @@ const config = {
     // رابط زر Message 
     messageUrl: "https://discord.com/users/695361892327358504"
 };
+
+
+

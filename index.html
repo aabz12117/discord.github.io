@@ -1,112 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BODI • House of the Dragon</title>
-    <meta property="og:title" content="𝓑𝓞𝓓𝑰 (@b0_9)">
-    <meta property="og:description" content="He can keep his tongue...">
-    <meta name="theme-color" content="#0B0B0D">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BODI</title>
+  <meta property="og:title" content="𝓑𝓞𝓓𝑰 (@b0_9)">
+  <meta property="og:description" content="He can keep his tongue...">
+  <meta name="theme-color" content="#101114">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+  <main class="profile-layout"><article class="profile-card">
+    <div id="banner" class="banner" aria-hidden="true"></div>
+    <div class="card-body">
+      <header class="profile-header">
+        <div class="avatar-wrap"><img id="avatar" class="avatar" src="" alt="Profile avatar"><span id="status" class="status-indicator offline" aria-label="Discord status"></span></div>
+        <div class="profile-title"><div class="name-row"><h1 id="name"></h1><div id="badges" class="badges" aria-label="Profile badges"></div></div><p id="username"></p></div>
+        <div class="actions"><a id="btn-message" class="button primary" target="_blank" rel="noreferrer"><i class="fa-regular fa-message"></i><span>Message</span></a><button id="btn-copy" class="button icon-button" type="button" aria-label="Copy username"><i class="fa-regular fa-copy"></i></button></div>
+      </header>
+      <section class="about-section"><h2 class="section-label">ABOUT ME</h2><p id="bio" class="bio"></p><div id="custom-status" class="custom-status" hidden><span id="cs-emoji"></span><span id="cs-text"></span></div></section>
 
-<div class="noise"></div>
-<div class="fog fog-1"></div>
-<div class="fog fog-2"></div>
-<div class="lava-glow top-left"></div>
-<div class="lava-glow bottom-right"></div>
-
-<!-- Targaryen sigil watermark -->
-<div class="sigil-watermark">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <g fill="none" stroke="currentColor" stroke-width="1.4">
-            <path d="M100 20 C 60 40, 40 80, 45 120 C 48 150, 70 175, 100 180 C 130 175, 152 150, 155 120 C 160 80, 140 40, 100 20 Z"/>
-            <path d="M100 35 L100 165 M60 60 Q100 90 140 60 M55 100 Q100 130 145 100 M65 140 Q100 160 135 140"/>
-        </g>
-    </svg>
-</div>
-
-<canvas id="embers"></canvas>
-<canvas id="smoke"></canvas>
-<canvas id="scales"></canvas>
-
-<div id="dragon-fire"></div>
-
-<div class="card-wrapper">
-    <main id="card" class="profile-card fade-in">
-        <div class="banner-container">
-            <div id="banner" class="banner"></div>
-            <div class="banner-overlay"></div>
-            <div class="banner-crack"></div>
-        </div>
-        <div class="profile-content">
-            <div class="header-section">
-                <div class="avatar-wrapper">
-                    <div class="fire-ring"></div>
-                    <img id="avatar" class="avatar" src="" alt="avatar">
-                    <div id="status" class="status-indicator offline"></div>
-                </div>
-                <div class="action-buttons">
-                    <a id="btn-message" target="_blank" class="btn btn-primary">
-                        <i class="fa-solid fa-dragon"></i> Message
-                    </a>
-                    <button id="btn-copy" class="btn btn-secondary">
-                        <i class="fa-solid fa-copy"></i>
-                        <span>Copy Username</span>
-                    </button>
-                </div>
-            </div>
-            <div class="info-section">
-                <div class="name-badge-wrapper">
-                    <h1 id="name" class="name"></h1>
-                    <div id="badges" class="badges-container"></div>
-                </div>
-                <h2 id="username" class="username"></h2>
-                <div class="divider"></div>
-                <p id="bio" class="bio"></p>
-                <div id="custom-status" class="custom-status" style="display:none;">
-                    <span id="cs-emoji" class="cs-emoji"></span>
-                    <span id="cs-text"></span>
-                </div>
-            </div>
-            <div class="details-section">
-                <div class="detail-box">
-                    <h3><i class="fa-solid fa-fire-flame-curved"></i> Member Since</h3>
-                    <p id="member-since"></p>
-                </div>
-                <div class="detail-box">
-                    <h3><i class="fa-solid fa-link"></i> Connections</h3>
-                    <div id="connections" class="connections-list"></div>
-                </div>
-                <div id="activity-card" class="activity-card" style="display:none;">
-                    <h3 id="activity-title" class="activity-title"></h3>
-                    <div class="activity-content">
-                        <img id="activity-img" src="" alt="">
-                        <div class="activity-info">
-                            <h4 id="activity-name"></h4>
-                            <p id="activity-artist"></p>
-                        </div>
-                        <div class="soundwave" style="display:none;">
-                            <span></span><span></span><span></span><span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="house-motto">
-                <span>Fire and Blood</span>
-            </div>
-        </div>
-    </main>
-</div>
-
-<div id="toast" class="toast">Copied!</div>
-
-<script src="config.js"></script>
-<script src="script.js"></script>
+      <footer class="profile-footer"><div class="member-since"><span>Member since</span><strong id="member-since"></strong></div><nav id="connections" class="connections" aria-label="Social links"></nav></footer>
+    </div>
+  </article><aside class="activity-panel"><div class="panel-heading"><span>Activity</span><i class="fa-solid fa-film" aria-hidden="true"></i></div><p class="section-label">CURRENT ACTIVITY</p>      <section id="activity-card" class="activity-card" hidden><p id="activity-title" class="eyebrow"></p><div class="activity-content"><img id="activity-img" src="" alt=""><div><h2 id="activity-name"></h2><p id="activity-artist"></p></div><span class="live-dot" aria-hidden="true"></span></div></section><p class="activity-note">Fire and blood.</p></aside></main>
+  <div id="toast" class="toast" role="status">Username copied</div>
+  <script src="config.js"></script><script src="script.js"></script>
 </body>
 </html>
+
